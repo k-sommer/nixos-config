@@ -1,13 +1,13 @@
 { config, pkgs, inputs, lib, hostName, ... }:
 {
-	imports = lib.optionals (hostName != "server-01") [
+	imports = lib.optionals (hostName != "serv-01") [
 		inputs.caelestia-shell.homeManagerModules.default
 		inputs.stylix.homeModules.stylix
 		inputs.zen-browser.homeModules.beta
 		./programs.nix
-    ./hyprland.nix
-    ./stylix.nix
-    ./zen.nix		
+    	./hyprland.nix
+    	./stylix.nix
+    	./zen.nix		
 	];
 
 	home.username = "sommer";
