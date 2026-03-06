@@ -7,7 +7,7 @@
 	  	
 	networking.hostName = "held-01";
 
-	features.gaming.steam.enable = true;
+	features.steam.enable = true;
   	
 	services.displayManager.gdm.enable = true; 
 	services.displayManager.autoLogin = {

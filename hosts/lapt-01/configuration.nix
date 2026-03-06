@@ -7,7 +7,10 @@
 	  	
 	networking.hostName = "lapt-01";
 
-	features.gaming.steam.enable = true;
+	features = {
+		starCitizen.enable = true;
+		steam.enable = true;
+	};
   	
 	services.displayManager.gdm.enable = true;
 

@@ -7,7 +7,7 @@
 	  	
 	networking.hostName = "desk-01";
 
-	features.gaming = {
+	features = {
 		starCitizen.enable = true;
 		steam.enable = true;
 	};
