@@ -9,11 +9,19 @@
 
 	# Potential point of issue with hyprland?
 	xdg.portal = {
-		enable = true;
-		extraPortals = with pkgs; [
-	    xdg-desktop-portal-gtk
-		];
-	};
+    enable = true;
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-gtk 
+    ];
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+      hyprland = {
+        default = [ "hyprland" "gtk" ];
+      };
+	  };
+	};	
 
 	hardware.bluetooth.enable = true;
 
@@ -38,11 +46,8 @@
 	};
 
 	programs.gamemode.enable = true;
-	programs.hyprland = {
-	  enable = true;
-	  package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-	};
-	  	
+	programs.hyprland.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
 		inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default

@@ -8,7 +8,7 @@ let
 		])
 		(lib.mkIf (hostName == "desk-01") [
 			"DP-1, preferred, auto, auto"
-			"HDMI-A-1, 1920x1080@120, auto-right, 1"
+			"HDMI-A-1, 2560x1440@60, auto-right, 1"
 			"DP-2, preferred, auto-left, auto"			
 		])
 	];	
@@ -38,9 +38,9 @@ in
 			};
 			
 			# Need to make this only apply to the handheld
-#			cursor = {
-#				no_hardware_cursors = 1;
-#			};
+			cursor = lib.optionals (hostName == held-01) {
+				no_hardware_cursors = 1;
+			};
 
 			general = {
 				exec = "hyprctl dispatch submap global";

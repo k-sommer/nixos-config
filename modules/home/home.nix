@@ -6,6 +6,7 @@
 		inputs.zen-browser.homeModules.beta
 		./programs.nix
     	./hyprland.nix
+		./caelestia.nix
     	./stylix.nix
     	./zen.nix		
 	];
