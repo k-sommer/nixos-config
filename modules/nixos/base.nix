@@ -4,7 +4,8 @@
 
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	# Only needed for unstable nixpkgs in flake.nix
+#	boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	networking.networkmanager.enable = true;
 
@@ -25,9 +26,7 @@
 
 	hardware.graphics = {
 		enable = true;
-		package = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.mesa;
 		enable32Bit = true;
-		package32 = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pkgsi686Linux.mesa;
 	};
 	
 	services.hardware.bolt.enable = true;

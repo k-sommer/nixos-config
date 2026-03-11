@@ -16,12 +16,12 @@ let
 	# Touchscreen rotation for legion go native portrait display
 	touchScreen = 
 		lib.mkIf (hostName == "held-01") { transform = 1; };
+	hardwareCursor = 
+		lib.mkIf (hostName == "held-01") { no_hardware_cursors = 1; };
 in
 {
 	wayland.windowManager.hyprland = {
 		enable = true;
-		package = null;
-		portalPackage = null;
 
 		settings = {
 
@@ -38,9 +38,7 @@ in
 			};
 			
 			# Need to make this only apply to the handheld
-			cursor = lib.optionals (hostName == held-01) {
-				no_hardware_cursors = 1;
-			};
+			cursor = {} // hardwareCursor;
 
 			general = {
 				exec = "hyprctl dispatch submap global";

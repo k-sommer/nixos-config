@@ -8,20 +8,16 @@
 	};
 
 	# Potential point of issue with hyprland?
-	xdg.portal = {
+  xdg.portal = {
     enable = true;
-    extraPortals = [ 
-      pkgs.xdg-desktop-portal-gtk 
-    ];
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
     config = {
-      common = {
-        default = [ "gtk" ];
-      };
       hyprland = {
         default = [ "hyprland" "gtk" ];
+        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
       };
-	  };
-	};	
+    };
+  };
 
 	hardware.bluetooth.enable = true;
 
@@ -37,7 +33,7 @@
 	services.upower.enable = true;
 	services.power-profiles-daemon.enable = true;
 	programs.dconf.enable = true;
-	services.pulseaudio.enable = false;  	
+	services.pulseaudio.enable = false;
 	services.pipewire = {
 	  enable = true;
 	  alsa.enable = true;
@@ -47,6 +43,13 @@
 
 	programs.gamemode.enable = true;
 	programs.hyprland.enable = true;
+
+	# Needed for running 25.11 stable
+	nixpkgs.overlays = [
+  	(final: prev: {
+    	xrdb = prev.xorg.xrdb or prev.xrdb;
+	  })
+	];
 
 	environment.systemPackages = with pkgs; [
 		inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default

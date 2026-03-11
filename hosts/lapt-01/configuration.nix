@@ -8,6 +8,7 @@
 	networking.hostName = "lapt-01";
 
 	features = {
+		nvidiaLaptop.enable = true;
 		starCitizen.enable = true;
 		steam.enable = true;
 	};

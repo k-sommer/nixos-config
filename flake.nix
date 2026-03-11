@@ -1,6 +1,6 @@
 {
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -63,7 +63,7 @@
 		nixosConfigurations = {
 			desk-01 = mkHost "desk-01" "sommer";
 			lapt-01 = mkHost "lapt-01" "sommer";
-#     lapt-02 = mkHost "lapt-02" "sommer"; 
+      lapt-02 = mkHost "lapt-02" "sommer"; 
 			serv-01 = mkHost "serv-01" "sommer";
 			held-01 = mkHost "held-01" "sommer";
 		};

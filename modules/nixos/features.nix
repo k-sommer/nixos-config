@@ -25,6 +25,9 @@ in
 				size = 16 * 1024;
 			}];
 
+			environment.systemPackages = with pkgs; [
+				inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher
+			];
 		})
 
 		(lib.mkIf cfg.steam.enable {
@@ -36,6 +39,7 @@ in
 
 		# Enables prime sync for laptops with nvidia cards
 		(lib.mkIf cfg.nvidiaLaptop.enable {
+			services.xserver.videoDrivers= [ "nvidia" ];
 		 	hardware.nvidia.open = true;
 		 	hardware.nvidia.prime = {
 		    	sync.enable = true;
