@@ -8,12 +8,17 @@
 	networking.hostName = "held-01";
 
 	features.steam.enable = true;
-  	
-	services.displayManager.gdm.enable = true; 
-	services.displayManager.autoLogin = {
-		enable = true;
-		user = "sommer";
-	};
+
+  	services.handheld-daemon = {
+  		enable = true;
+  		user = "sommer";
+  		ui.enable = true;
+  	};
+  	services.displayManager.gdm.enable = true;
+  	services.displayManager.autoLogin = {
+  		enable = true;
+  		user = "sommer";
+  	};
 
 	system.stateVersion = "25.11";
 }
