@@ -44,12 +44,12 @@
 	programs.gamemode.enable = true;
 	programs.hyprland.enable = true;
 
-	# Needed for running 25.11 stable
-	nixpkgs.overlays = [
-  	(final: prev: {
-    	xrdb = prev.xorg.xrdb or prev.xrdb;
-	  })
-	];
+# Needed for running 25.11 stable
+#	nixpkgs.overlays = [
+#  	(final: prev: {
+#    	xrdb = prev.xorg.xrdb or prev.xrdb;
+#	  })
+#	];
 
 	environment.systemPackages = with pkgs; [
 		inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
@@ -71,6 +71,7 @@
 	 	gnome-software
 	 	grim
 	 	flameshot
+		krita
 		tor-browser
 	];
 }

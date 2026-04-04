@@ -25,6 +25,13 @@ in
 
 		settings = {
 
+    	device = [
+        {
+        name = "xp-pen-artist-13.3-stylus";
+        output = "HDMI-A-1";
+        }
+      ];
+
 			monitor = [ displays ];
 
 			exec-once = "";
@@ -65,6 +72,7 @@ in
 				numlock_by_default = true;
 				touchpad.natural_scroll = true;
 				touchdevice = {} // touchScreen;
+				tablet.output = "HDMI-A-1";
 			};
 			
 			bind = [

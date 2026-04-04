@@ -5,7 +5,7 @@
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 	# Only needed for unstable nixpkgs in flake.nix
-#	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	networking.networkmanager.enable = true;
 

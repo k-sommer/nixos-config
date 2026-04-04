@@ -1,17 +1,22 @@
 {
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		jovian-nixos = {
+			url = "github:jovian-Experiments/jovian-nixos";
+		};
+
 		hyprland.url = "github:hyprwm/Hyprland";
 
 		caelestia-shell = {
 			url = "github:caelestia-dots/shell";
-			inputs.nixpkgs.follows = "nixpkgs";
+			inputs.nixpkgs.follows = "nixpkgs-stable";
 		};
 
 		rose-pine-hyprcursor = {
@@ -56,6 +61,7 @@
 						extraSpecialArgs = { inherit inputs user hostName; };
 					};
 				}
+				inputs.jovian-nixos.nixosModules.default
 			];
 		};
 
@@ -63,7 +69,7 @@
 		nixosConfigurations = {
 			desk-01 = mkHost "desk-01" "sommer";
 			lapt-01 = mkHost "lapt-01" "sommer";
-      lapt-02 = mkHost "lapt-02" "sommer"; 
+	    	lapt-02 = mkHost "lapt-02" "sommer"; 
 			serv-01 = mkHost "serv-01" "sommer";
 			held-01 = mkHost "held-01" "sommer";
 		};
