@@ -8,7 +8,7 @@ let
 		])
 		(lib.mkIf (hostName == "desk-01") [
 			"DP-1, preferred, auto, auto"
-			"HDMI-A-1, 2560x1440@60, auto-right, 1"
+			"HDMI-A-1, 1920x1080@120, auto-right, 1"
 			"DP-2, preferred, auto-left, auto"			
 		])
 	];	
@@ -100,7 +100,7 @@ in
 				"SUPER SHIFT, 4, movetoworkspace, 4"
 				# Caelestia-shell binds
 				"SUPER, space, global, caelestia:launcher"
-				"SUPER, print, exec, flameshot full --path /home/kais/Pictures/Screenshots"
+				"SUPER, print, exec, flameshot full --path /home/sommer/Pictures/Screenshots"
 			];
 
 			bindel = [

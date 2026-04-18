@@ -33,6 +33,8 @@
 	services.upower.enable = true;
 	services.power-profiles-daemon.enable = true;
 	programs.dconf.enable = true;
+	services.mullvad-vpn.enable = true;
+	services.resolved.enable = true;
 	services.pulseaudio.enable = false;
 	services.pipewire = {
 	  enable = true;
@@ -40,6 +42,8 @@
 	  alsa.support32Bit = true;
 	  pulse.enable = true;
 	};
+
+	virtualisation.libvirtd.enable = true;
 
 	programs.gamemode.enable = true;
 	programs.hyprland.enable = true;
@@ -69,9 +73,14 @@
 		transmission_4-gtk
 	 	evince
 	 	gnome-software
+		virt-manager
+		dnsmasq
 	 	grim
 	 	flameshot
+		mullvad-vpn
 		krita
 		tor-browser
+		openra
+		prismlauncher
 	];
 }

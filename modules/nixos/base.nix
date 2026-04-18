@@ -6,6 +6,9 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 	# Only needed for unstable nixpkgs in flake.nix
 	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot.kernel.sysctl = {
+		"net.ipv4.ip_unprivileged_port_start" = 443;
+	};
 
 	networking.networkmanager.enable = true;
 
@@ -48,7 +51,7 @@
 	users.users.sommer = {
 		isNormalUser = true;
 	  description = "sommer";
-	  extraGroups = [ "networkmanager" "wheel" ];
+	  extraGroups = [ "networkmanager" "wheel" "libvirtd"];
 		shell = pkgs.fish;
 	};
 
