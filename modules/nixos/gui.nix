@@ -20,6 +20,7 @@
   };
 
 	hardware.bluetooth.enable = true;
+	hardware.xone.enable = true;
 
 	# Realtime priority for pulseaudo and pipewire
 	security.rtkit.enable = true;
@@ -70,6 +71,7 @@
 	  vscodium-fhs
 	  nautilus
 	  mission-center
+		xone-dongle-firmware
 		protonup-qt
 		lutris
 	  baobab
