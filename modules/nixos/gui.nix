@@ -42,6 +42,10 @@
 	  alsa.support32Bit = true;
 	  pulse.enable = true;
 	};
+	services.hardware.openrgb = {
+		enable = true;
+		motherboard = "amd";
+	};
 
 	virtualisation.libvirtd.enable = true;
 
@@ -62,6 +66,7 @@
 	  playerctl
 	  hyprpolkitagent
 		adwaita-icon-theme
+		openrgb-with-all-plugins
 	  vscodium-fhs
 	  nautilus
 	  mission-center
