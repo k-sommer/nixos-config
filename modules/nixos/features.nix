@@ -6,6 +6,7 @@ in
 	options.features = {
 		starCitizen.enable = lib.mkEnableOption "Star Citizen optimizations and package";
 		steam.enable = lib.mkEnableOption "Steam install";
+		nvidia.enable = lib.mkEnableOption "Nvidia drivers";
 		nvidiaLaptop.enable = lib.mkEnableOption "Nvidia Prime Configuration";
 	};
 
@@ -35,6 +36,11 @@ in
 				enable = true;
 				gamescopeSession.enable = true;
 			};
+		})
+
+		(lib.mkIf cfg.nvidia.enable {
+			services.xserver.videoDrivers = [ "nvidia" ];
+			hardware.nvidia.open = true;
 		})
 
 		# Enables prime sync for laptops with nvidia cards
