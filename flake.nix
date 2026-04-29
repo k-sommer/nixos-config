@@ -68,9 +68,9 @@
 	in {
 		nixosConfigurations = {
 			desk-01 = mkHost "desk-01" "sommer";
+			desk-02 = mkHost "desk-02" "sommer";
 			lapt-01 = mkHost "lapt-01" "sommer";
-	    	lapt-02 = mkHost "lapt-02" "sommer"; 
-			serv-01 = mkHost "serv-01" "sommer";
+	    lapt-02 = mkHost "lapt-02" "sommer"; 
 			held-01 = mkHost "held-01" "sommer";
 		};
 	};	
