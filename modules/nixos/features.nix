@@ -40,17 +40,23 @@ in
 
 		(lib.mkIf cfg.nvidia.enable {
 			services.xserver.videoDrivers = [ "nvidia" ];
-			hardware.nvidia.open = true;
+			hardware.nvidia = {
+				open = true;
+				modesetting.enable = true;
+			};
 		})
 
 		# Enables prime sync for laptops with nvidia cards
 		(lib.mkIf cfg.nvidiaLaptop.enable {
 			services.xserver.videoDrivers= [ "nvidia" ];
-		 	hardware.nvidia.open = true;
-		 	hardware.nvidia.prime = {
+		 	hardware.nvidia = {
+				open = true;
+				modesetting.enable = true;
+				prime = {
 		    	sync.enable = true;
 		    	intelBusId = "PCI:0:2:0";
 		    	nvidiaBusId = "PCI:1:0:0";
+				};
 			};
 		})		
 	];
