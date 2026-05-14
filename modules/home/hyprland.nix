@@ -70,7 +70,10 @@ in
 			
 			input = {
 				numlock_by_default = true;
-				touchpad.natural_scroll = true;
+				touchpad = {
+					natural_scroll = true;
+					clickfinger_behavior = true;
+				};
 				touchdevice = {} // touchScreen;
 				tablet.output = "HDMI-A-1";
 			};
