@@ -53,6 +53,15 @@
 	programs.gamemode.enable = true;
 	programs.hyprland.enable = true;
 
+	nixpkgs.overlays = [
+  # Skipping tests while upstream sorts it out, revert once lutris builds
+  (final: prev: {
+    	openldap = prev.openldap.overrideAttrs (_: {
+    		doCheck = false;
+    	});
+  	})
+  ];
+
 # Needed for running 25.11 stable
 #	nixpkgs.overlays = [
 #  	(final: prev: {
