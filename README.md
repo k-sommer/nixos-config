@@ -1,4 +1,9 @@
 # NixOS System Configurations
-This repository contains my NixOS system configurations specialized for the devices I manage in my home, and is not meant to be an initial foundation for others to build off of. However anyone is welcome to reference and copy these files for their own configurations.
+This repository contains my NixOS system configurations specialized for the devices I manage in my home, and is not meant to be an initial foundation for others to build off of. However, anyone is welcome to reference and copy these files for their own configurations.
+
 # How These Files are Structured
 I've built up these configuration files to be modular in nature, giving the ability to pick and choose what features, services, and applications are being used per host. Currently there are 5 hosts being managed with these files, from the laptop used for a testing environment to stage and push updates, to multiple gaming PC's and a Lenovo Legion Go. Hyprland in combination with Caelestia-shell are used as a desktop environment, eliminating any unneeded services and applications regular desktop environments come with. Jovian NixOS is being used as a steamOS alternative for the handheld and an HTPC, with easy access to switch over to hyprland if needed.
+
+# Screenshots
+![image](assets/screenshot1.jpeg)
+![image](assets/screenshot2.jpeg)
