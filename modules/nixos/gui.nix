@@ -76,7 +76,6 @@
 	  playerctl
 	  hyprpolkitagent
 		adwaita-icon-theme
-		openrgb-with-all-plugins
 	  vscodium-fhs
 	  nautilus
 	  mission-center
