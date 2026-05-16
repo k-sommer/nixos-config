@@ -98,5 +98,6 @@
 		tor-browser
 		openra
 		prismlauncher
+		obsidian
 	];
 }
