@@ -2,7 +2,9 @@
 {
 	imports = [
 		./base.nix
+		./dev.nix
 		./gui.nix
-    ./features.nix
+    ./gaming.nix
+		./jovian.nix
 	];
 }
