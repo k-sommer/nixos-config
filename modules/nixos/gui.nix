@@ -76,11 +76,9 @@
 	  playerctl
 	  hyprpolkitagent
 		adwaita-icon-theme
-	  vscodium-fhs
 	  nautilus
 	  mission-center
 		xone-dongle-firmware
-		protonup-qt
 		lutris
 	  baobab
 	  eog
@@ -88,15 +86,11 @@
 		transmission_4-gtk
 	 	evince
 	 	gnome-software
-		virt-manager
 		dnsmasq
 	 	grim
 	 	flameshot
 		mullvad-vpn
-		krita
-		tor-browser
 		openra
 		prismlauncher
-		obsidian
 	];
 }
