@@ -1,5 +1,5 @@
-# NixOS System Configurations
-This repository contains a declarative configuration designed to manage a varied fleet of linux devices from a single source of truth. Using a modular structure allows for seperating endpoint specific hardware profiles from reusable system features, services, and drivers. ```mkHost``` is used in ```flake.nix``` for the purpose of passing the host name and user variables, eliminating code duplication. This has the added benefit of easily being able to scale from 5 devices to 500 with minimal code. 
+# NixOS Systems Configuration
+This repository contains a NixOS systems configuration designed to manage a varied fleet of linux devices from a single source of truth. 
 
 # Deployment staging
 ```lapt-01``` is leveraged as a staging environment to build, evaluate, and test system updates before utilizing rsync and ssh to deploy zero-downtime rolling upgrades to live nodes. Even when an end user is gaming!
