@@ -20,5 +20,7 @@
     };
   };
 
+  services.displayManager.gdm.enable = true;
+ 
   system.stateVersion = "25.11";
 }

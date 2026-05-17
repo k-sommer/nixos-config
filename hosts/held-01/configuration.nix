@@ -3,14 +3,17 @@
 	imports = [
 		./hardware-configuration.nix
     ../../modules/nixos
-		../../modules/nixos/jovian.nix
 	];
 	  	
 	boot.kernelParams = [ "amdgpu.backlight=0" ];
 
 	networking.hostName = "held-01";
 
-	features.steam.enable = true;
+	features = {
+		gui.enable = true;
+		jovian.enable = true;
+		steam.enable = true;
+	};
 
   	services.handheld-daemon = {
   		enable = true;
