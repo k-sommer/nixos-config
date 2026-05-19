@@ -7,7 +7,6 @@ in
 
   config = (lib.mkIf cfg.dev.enable {
     environment.systemPackages = with pkgs; [
-      rust-analyzer
       vscodium-fhs
       tor-browser
       obsidian
