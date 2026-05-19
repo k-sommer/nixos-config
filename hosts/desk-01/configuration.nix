@@ -12,9 +12,8 @@
 		dev.enable = true;
 		starCitizen.enable = true;
 		steam.enable = true;
+		jovian.enable = true;
 	};
-
-	services.displayManager.gdm.enable = true;
 
 	system.stateVersion = "25.11";
 }
