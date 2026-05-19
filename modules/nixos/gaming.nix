@@ -8,6 +8,7 @@ in
 		steam.enable = lib.mkEnableOption "Steam install";
 		nvidia.enable = lib.mkEnableOption "Nvidia drivers";
 		nvidiaLaptop.enable = lib.mkEnableOption "Nvidia Prime Configuration";
+		xone.enable = lib.mkEnableOption "Xone drivers (including dongle firmware)";
 	};
 
 	config = lib.mkMerge [
@@ -59,5 +60,12 @@ in
 				};
 			};
 		})		
+
+		(lib.mkIf cfg.xone.enable {
+			hardware.xone.enable = true;
+			environment.systemPackages = with pkgs; [
+				xone-dongle-firmware
+			];
+		})
 	];
 }

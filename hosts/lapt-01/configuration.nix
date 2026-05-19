@@ -14,6 +14,7 @@
 		nvidiaLaptop.enable = true;
 		starCitizen.enable = true;
 		steam.enable = true;
+		xone.enable = true;
 	};
   	
 	services.displayManager.gdm.enable = true;

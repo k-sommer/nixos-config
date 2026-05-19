@@ -25,7 +25,6 @@ in
   	};
 
 		hardware.bluetooth.enable = true;
-		hardware.xone.enable = true;
 
 		# Realtime priority for pulseaudo and pipewire
 		security.rtkit.enable = true;
@@ -76,7 +75,6 @@ in
 			adwaita-icon-theme
 	  	nautilus
 	  	mission-center
-			xone-dongle-firmware
 			lutris
 	  	baobab
 	  	eog

@@ -12,6 +12,7 @@
 		dev.enable = true;
 		starCitizen.enable = true;
 		steam.enable = true;
+		xone.enable = true;
 		jovian.enable = true;
 	};
 
