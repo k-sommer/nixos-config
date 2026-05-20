@@ -13,17 +13,6 @@ in
 			trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
 		};
 
-  	xdg.portal = {
-    	enable = true;
-    	extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-    	config = {
-      	hyprland = {
-        	default = [ "hyprland" "gtk" ];
-        	"org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-      	};
-    	};
-  	};
-
 		hardware.bluetooth.enable = true;
 
 		# Realtime priority for pulseaudo and pipewire

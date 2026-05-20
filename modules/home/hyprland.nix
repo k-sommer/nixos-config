@@ -20,6 +20,17 @@ let
 		lib.mkIf (hostName == "held-01") { no_hardware_cursors = 1; };
 in
 {
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ];
+    config = {
+      hyprland = {
+        default = [ "hyprland" "gtk" ];
+        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+      };
+    };
+  };	
+
 	wayland.windowManager.hyprland = {
 		enable = true;
 
