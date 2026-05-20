@@ -12,7 +12,6 @@
 		gui.enable = true;
 		dev.enable = true;
 		nvidiaLaptop.enable = true;
-		starCitizen.enable = true;
 		steam.enable = true;
 		xone.enable = true;
 	};
