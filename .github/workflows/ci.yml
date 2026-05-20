@@ -13,6 +13,8 @@ jobs:
 
       - name: Check Nix flake inputs
         uses: DeterminateSystems/flake-checker-action@main # This action
+        with:
+          flake-lock-path: ../../flake.lock
 
       - name: Install Nix
         uses: DeterminateSystems/determinate-nix-action@v3
