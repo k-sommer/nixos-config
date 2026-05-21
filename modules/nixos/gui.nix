@@ -61,7 +61,6 @@ in
 			brightnessctl
 	  	playerctl
 	  	hyprpolkitagent
-			adwaita-icon-theme
 	  	nautilus
 	  	mission-center
 			lutris

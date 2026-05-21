@@ -1,0 +1,52 @@
+{
+    "background": {
+        "desktopClock": {
+            "background": {
+                "blur": true
+            },
+            "enabled": false,
+            "invertColors": true,
+            "position": "top-right",
+            "shadow": {
+                "enabled": true
+            }
+        }
+    },
+    "bar": {
+        "clock": {
+            "background": false,
+            "showDate": true,
+            "showIcon": false
+        },
+        "status": {
+            "showLockStatus": false
+        },
+        "workspaces": {
+            "occupiedBg": false,
+            "shown": 4
+        }
+    },
+    "launcher": {
+        "hiddenApps": [
+            "xterm",
+            "qt6ct",
+            "qt5ct",
+            "openra-ra",
+            "openra-cnc",
+            "nixos-manual",
+            "micro",
+            "kvantummanager",
+            "org.flameshot.Flameshot",
+            "org.gnome.eog",
+            "org.gnome.Evince",
+            "nvidia-settings",
+            "No Man's Sky",
+            "PEAK",
+            "org.gnome.Totem",
+            "R.E.P.O.",
+            "Don't Starve Together",
+            "Anno 1800"
+        ],
+        "showOnHover": true
+    }
+}
