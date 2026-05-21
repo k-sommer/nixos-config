@@ -1,7 +1,7 @@
 # ❄️ NixOS configuration
-This repo contains my NixOS configuration files used to build and manage my system environments across multiple device types.
+This repo contains my NixOS configuration files used to build and manage my system environments across multiple device types. 
 # 🏗️ Structure
-Like others I have structured my files in a modular manner, focusing on using toggles to enable certain features (e.g. desktop environment, steam, dev tools, etc). The (nixos directory)[./modules/nixos] is used for the core configuration modules, while the (home directory)[./modules/home] is used for home-manager modules which are not currently toggleable.
+Like others I have structured my files in a modular manner, focusing on using toggles to enable certain features (e.g. desktop environment, steam, dev tools, etc). The /modules/nixos directory is used for the core configuration modules, while the /modules/home directory is used for home-manager modules.
 # ⚪ Feature toggles
 | Toggles |Description |
 |---------|------------|
@@ -14,7 +14,6 @@ Like others I have structured my files in a modular manner, focusing on using to
 ![image](assets/screenshot-1.png)
 ![image](assets/screenshot-2.png)
 ![image](assets/screenshot-3.png)
-![image](assets/screenshot-4.png)
 # ✔️ To Do
 - [ ] Enable secrets implimentation using either sops-nix or agenix
 - [ ] Remove hardcoded bus ID's in favor of using mkOption
