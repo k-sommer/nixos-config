@@ -10,13 +10,11 @@ Like others I have structured my files in a modular manner, focusing on using to
 |```features.steam.enable``` | Installs the steam client and gamescope |
 |```features.nvidia.enable``` | Installs the current Nvidia drivers|
 |```features.nvidiaPrime.enable``` | Installs the current Nvidia drivers and enables prime sync. The bus ID's are currently hardcoded|
-<details>
-<summary>Screenshots</summary>
+# 📸 Screenshots
 ![image](assets/screenshot-1.jpeg)
 ![image](assets/screenshot-2.jpeg)
 ![image](assets/screenshot-3.jpeg)
 ![image](assets/screenshot-4.jpeg)
-</details>
 # ✔️ To Do
 - [ ] Enable secrets implimentation using either sops-nix or agenix
 - [ ] Remove hardcoded bus ID's in favor of using mkOption
