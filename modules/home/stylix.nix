@@ -8,8 +8,8 @@
 
 		icons = {
 			enable = true;
-			dark = "Fluent";
-			package = pkgs.fluent-icon-theme;
+			dark = "Adwaita";
+			package = pkgs.adwaita-icon-theme;
 		};
 	};
 }
