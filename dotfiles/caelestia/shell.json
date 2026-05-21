@@ -48,5 +48,8 @@
             "Anno 1800"
         ],
         "showOnHover": true
+    },
+    "paths": {
+        "sessionGif": "/home/sommer/nixos-config/assets/nixos.png"
     }
 }
