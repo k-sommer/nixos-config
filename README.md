@@ -1,19 +1,22 @@
-# NixOS Systems Configuration
-This repository contains a NixOS systems configuration designed to manage a varied fleet of linux devices from a single source of truth. 
-
-# Deployment staging
-```lapt-01``` is leveraged as a staging environment to build, evaluate, and test system updates before utilizing rsync and ssh to deploy zero-downtime rolling upgrades to live nodes. Even when an end user is gaming!
-
-# Interface
-[Hyprland](https://github.com/hyprwm/Hyprland) and [Caelestia-shell](https://github.com/caelestia-dots/shell) are used in favor of the usual desktop environment as to eliminate any unnecessary packages or services. [Jovian NixOS](https://github.com/Jovian-Experiments/Jovian-NixOS) is used on ```held-01```, ```desk-01```, and ```desk-02``` for a SteamOS like experience, while still being able to switch to the hyprland desktop. 
-
-## To Do!
-- [ ] Impliment secrets (sops or agenix)
-- [ ] Remove hardcoded bus ID's in the nvidiaLaptop feature toggle in favor of ```mkOption```
-- [ ] Add more comments and information for explaining the logic behind the decisions made
-- [ ] Change logout button on Caelestia-shell to switch back to the steam ui
-- [ ] Start using branches for the sake of seperating a staging and production environment
- 
-# Screenshots
-![image](assets/screenshot1.jpeg)
-![image](assets/screenshot2.jpeg)
+# ❄️ NixOS configuration
+This repo contains my NixOS configuration files used to build and manage my system environments across multiple device types.
+# 🏗️ Structure
+Like others I have structured my files in a modular manner, focusing on using toggles to enable certain features (e.g. desktop environment, steam, dev tools, etc). The (nixos directory)[./modules/nixos] is used for the core configuration modules, while the (home directory)[./modules/home] is used for home-manager modules which are not currently toggleable.
+# ⚪ Feature toggles
+| Toggles |Description |
+|---------|------------|
+|```features.dev.enable```| Installs vscodium and obisidan packages |
+|```features.starCitizen.enable``` | Installs the RSI launcher and makes changes to the kernel for stability |
+|```features.steam.enable``` | Installs the steam client and gamescope |
+|```features.nvidia.enable``` | Installs the current Nvidia drivers|
+|```features.nvidiaPrime.enable``` | Installs the current Nvidia drivers and enables prime sync. The bus ID's are currently hardcoded|
+<details>
+<summary>Screenshots</summary>
+![image](assets/screenshot-1.jpeg)
+![image](assets/screenshot-2.jpeg)
+![image](assets/screenshot-3.jpeg)
+![image](assets/screenshot-4.jpeg)
+</details>
+# ✔️ To Do
+- [ ] Enable secrets implimentation using either sops-nix or agenix
+- [ ] Remove hardcoded bus ID's in favor of using mkOption
