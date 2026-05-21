@@ -11,10 +11,10 @@ Like others I have structured my files in a modular manner, focusing on using to
 |```features.nvidia.enable``` | Installs the current Nvidia drivers|
 |```features.nvidiaPrime.enable``` | Installs the current Nvidia drivers and enables prime sync. The bus ID's are currently hardcoded|
 # 📸 Screenshots
-![image](assets/screenshot-1.jpeg)
-![image](assets/screenshot-2.jpeg)
-![image](assets/screenshot-3.jpeg)
-![image](assets/screenshot-4.jpeg)
+![image](assets/screenshot-1.png)
+![image](assets/screenshot-2.png)
+![image](assets/screenshot-3.png)
+![image](assets/screenshot-4.png)
 # ✔️ To Do
 - [ ] Enable secrets implimentation using either sops-nix or agenix
 - [ ] Remove hardcoded bus ID's in favor of using mkOption
