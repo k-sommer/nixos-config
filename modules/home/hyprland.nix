@@ -62,21 +62,21 @@ in
 				exec = "hyprctl dispatch submap global";
 				submap = "global";
 				layout = "dwindle";
-				gaps_in = 4;
-				gaps_out = 15;
+				gaps_in = 5;
+				gaps_out = 5;
 				border_size = 0;
 			};
 
 			decoration = {
 				rounding = 15;
-				active_opacity = 0.9;
-				inactive_opacity = 0.7;
-				blur = {
-					enabled = true;
-					size = 5;
-					passes = 3;
-					brightness = 0.5;
-				};
+#				active_opacity = 1.0;
+#				inactive_opacity = 0.9;
+#				blur = {
+#					enabled = true;
+#					size = 5;
+#					passes = 3;
+#					brightness = 0.5;
+#				};
 			};
 			
 			input = {
