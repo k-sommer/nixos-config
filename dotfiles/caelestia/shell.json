@@ -26,6 +26,9 @@
             "shown": 4
         }
     },
+    "border": {
+        "rounding": 15
+    },
     "launcher": {
         "hiddenApps": [
             "xterm",
@@ -45,7 +48,9 @@
             "org.gnome.Totem",
             "R.E.P.O.",
             "Don't Starve Together",
-            "Anno 1800"
+            "Anno 1800",
+            "org.openrgb.OpenRGB",
+            "Anno 2205"
         ],
         "showOnHover": true
     },
