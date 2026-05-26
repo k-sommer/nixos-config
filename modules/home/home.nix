@@ -1,4 +1,7 @@
 { config, pkgs, inputs, lib, hostName, ... }:
+let
+	dotfiles = "/home/sommer/nixos-config/dotfiles";
+in
 {
 	imports = [
 		inputs.caelestia-shell.homeManagerModules.default
@@ -10,9 +13,12 @@
     	./zen.nix		
 	];
 
-	programs.caelestia.enable = true;
+	programs.caelestia = {
+		enable = true;
+		cli.enable = false;
+	};		
 		home.file.".config/caelestia".source = 
-			config.lib.file.mkOutOfStoreSymlink "/home/sommer/nixos-config/dotfiles/caelestia";
+			config.lib.file.mkOutOfStoreSymlink "${dotfiles}/caelestia";
 
 	home.username = "sommer";
 	home.homeDirectory = "/home/sommer";
