@@ -3,6 +3,8 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
+		agenix.url = "github:ryantm/agenix";
+
 		determinate = {
 			url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -66,6 +68,7 @@
 						extraSpecialArgs = { inherit inputs user hostName; };
 					};
 				}
+				inputs.agenix.nixosModules.default
 				inputs.jovian-nixos.nixosModules.default
 			];
 		};
