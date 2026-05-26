@@ -7,6 +7,8 @@
 	# Only needed for unstable nixpkgs in flake.nix
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
+	age.secrets.secret1.file = ../../secrets/secret1.age;
+
 	networking.networkmanager.enable = true;
 
 	time.timeZone = "America/Denver";
@@ -45,17 +47,23 @@
 		options = "--delete-older-than 2d";
 	};
 
+	users.mutableUsers = false;
+
 	users.users.sommer = {
 		isNormalUser = true;
+		hashedPasswordFile = config.age.secrets.secret1.path;
 	  description = "sommer";
 	  extraGroups = [ "networkmanager" "wheel" "libvirtd"];
 		shell = pkgs.fish;
 	};
 
+	environment.variables.EDITOR = "micro";
+
 	nixpkgs.config.allowUnfree = true;
 	programs.fish.enable = true;
 
 	environment.systemPackages = with pkgs; [
+		inputs.agenix.packages.x86_64-linux.default
 		git
 		micro-full
 	];
