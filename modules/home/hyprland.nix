@@ -7,7 +7,7 @@ let
 			"DP-3, preferred, auto-right, 2"
 		])
 		(lib.mkIf (hostName == "desk-01") [
-			"DP-1, 2560x1440@144, auto, auto, transform, 1"
+			"DP-1, 2560x1440@144, auto, auto"
 			"HDMI-A-1, 1920x1080@120, auto-right, 1"
 			"DP-2, 2560x1440@144, auto-left, auto"			
 		])
@@ -16,6 +16,7 @@ let
 	# Touchscreen rotation for legion go native portrait display
 	touchScreen = 
 		lib.mkIf (hostName == "held-01") { transform = 1; };
+	
 	hardwareCursor = 
 		lib.mkIf (hostName == "held-01") { no_hardware_cursors = 1; };
 in
@@ -36,13 +37,6 @@ in
 
 		settings = {
 
-    	device = [
-        {
-        name = "xp-pen-artist-13.3-stylus";
-        output = "HDMI-A-1";
-        }
-      ];
-
 			monitor = [ displays ];
 
 			exec-once = "";
@@ -55,7 +49,6 @@ in
 				force_zero_scaling = true;
 			};
 			
-			# Need to make this only apply to the handheld
 			cursor = {} // hardwareCursor;
 
 			general = {
@@ -63,7 +56,7 @@ in
 				submap = "global";
 				layout = "dwindle";
 				gaps_in = 5;
-				gaps_out = 5;
+				gaps_out = 10;
 				border_size = 0;
 			};
 
