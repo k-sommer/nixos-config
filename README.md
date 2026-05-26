@@ -15,5 +15,5 @@ Like others I have structured my files in a modular manner, focusing on using to
 ![image](assets/screenshot-2.png)
 ![image](assets/screenshot-3.png)
 # ✔️ To Do
-- [ ] Enable secrets implimentation using either sops-nix or agenix
+- [x] Enable secrets implimentation using either sops-nix or agenix
 - [ ] Remove hardcoded bus ID's in favor of using mkOption
