@@ -3,18 +3,18 @@
 	imports = [
 		./hardware-configuration.nix
     ../../modules/nixos
+		../../modules/nixos/gui.nix
 	];
 	  	
 	networking.hostName = "desk-01";
 
 	features = {
-		gui.enable = true;
-		dev.enable = true;
 		starCitizen.enable = true;
 		steam.enable = true;
 		xone.enable = true;
-		jovian.enable = true;
 	};
+
+	services.displayManager.gdm.enable = true;
 
 	system.stateVersion = "25.11";
 }
