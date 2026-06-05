@@ -14,7 +14,13 @@
 		xone.enable = true;
 	};
 
-	services.displayManager.gdm.enable = true;
+	services.displayManager = {
+		ly.enable = true;
+		autoLogin = {
+			enable = true;
+			user = "sommer";
+		};
+	};
 
 	system.stateVersion = "25.11";
 }

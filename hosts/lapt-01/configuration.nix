@@ -15,7 +15,7 @@
 		xone.enable = true;
 	};
   	
-	services.displayManager.gdm.enable = true;
+	services.displayManager.ly.enable = true;
 
 	system.stateVersion = "25.11";
 }
