@@ -74,10 +74,16 @@ in
 				tablet.output = "HDMI-A-1";
 			};
 			
+			bindm = [
+				"SUPER, mouse:272, movewindow"
+				"SUPER ALT, mouse:272, resizewindow"
+			];
+
 			bind = [
 				"SUPER, Q, exec, kitty"
 				"SUPER, C, killactive"
-				"SUPER, F, fullscreen"			
+				"SUPER, F, fullscreen"		
+				"SUPER, v, togglefloating"	
 				# Window navigation
 				"SUPER, left, movefocus, l"
 				"SUPER, right, movefocus, r"
