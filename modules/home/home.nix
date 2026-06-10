@@ -1,6 +1,6 @@
-{ config, pkgs, inputs, lib, hostName, ... }:
+{ config, pkgs, inputs, lib, user, hostName, ... }:
 let
-	dotfiles = "/home/sommer/nixos-config/dotfiles";
+	dotfiles = "/home/${user}/nixos-config/dotfiles";
 in
 {
 	imports = [
