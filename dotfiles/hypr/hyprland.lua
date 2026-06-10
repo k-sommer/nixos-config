@@ -8,9 +8,9 @@ local get_hostname = function()
     return hostname
 end
 
--- require("modules.hosts." .. get_hostname())
+require("modules.hosts." .. get_hostname())
 
-hl.env("HYPRCURSOR_THEME", "rose-pine")
+hl.env("HYPRCURSOR_THEME", "rose-pine-hypercursor")
 
 hl.config({
     xwayland = {
