@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ pkgs, inputs, ... }:
 {
 	# Hyprland cache to speed up building
 	nix.settings = {
