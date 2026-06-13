@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
       direnv
-      vscodium-fhs
       obsidian
+      jetbrains.rust-rover
     ];
 }
