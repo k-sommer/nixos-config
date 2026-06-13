@@ -1,8 +1,10 @@
 { config, pkgs, lib, inputs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-      direnv
-      obsidian
-      jetbrains.rust-rover
-    ];
+	programs.nix-ld.enable = true;
+	environment.systemPackages = with pkgs; [
+	  nixd
+		zed-editor
+		direnv
+		obsidian
+	];
 }
