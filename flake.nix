@@ -72,9 +72,7 @@
 		nixosConfigurations = {
 			desk-01 = mkHost "desk-01" "sommer";
 			lapt-01 = mkHost "lapt-01" "sommer";
-			# Currently unused
-#	    lapt-02 = mkHost "lapt-02" "sommer"; 
 			held-01 = mkHost "held-01" "sommer";
 		};
-	};	
+	};
 }
