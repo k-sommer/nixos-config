@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, dirs, ... }:
+{ ... }:
 {
 	imports = [
 		./hardware-configuration.nix
@@ -6,7 +6,7 @@
 		../../modules/nixos/gui.nix
 		../../modules/nixos/dev.nix
 	];
-	  	
+
 	networking.hostName = "lapt-01";
 
 	features = {
@@ -14,7 +14,7 @@
 		steam.enable = true;
 		xone.enable = true;
 	};
-  	
+
 	services.displayManager.ly.enable = true;
 
 	system.stateVersion = "25.11";

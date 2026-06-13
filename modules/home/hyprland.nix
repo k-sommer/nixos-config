@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, hostName, ... }:
+{ pkgs, lib, hostName, ... }:
 let
 	# Monitor arrangements per host
 	displays = lib.mkMerge [
@@ -9,15 +9,15 @@ let
 		(lib.mkIf (hostName == "desk-01") [
 			"DP-1, 2560x1440@144, auto, auto"
 			"HDMI-A-1, 1920x1080@120, auto-right, 1"
-			"DP-2, 2560x1440@144, auto-left, auto"			
+			"DP-2, 2560x1440@144, auto-left, auto"
 		])
-	];	
+	];
 
 	# Touchscreen rotation for legion go native portrait display
-	touchScreen = 
+	touchScreen =
 		lib.mkIf (hostName == "held-01") { transform = 1; };
-	
-	hardwareCursor = 
+
+	hardwareCursor =
 		lib.mkIf (hostName == "held-01") { no_hardware_cursors = 1; };
 in
 {
@@ -30,7 +30,7 @@ in
         "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
       };
     };
-  };	
+  };
 
 	wayland.windowManager.hyprland = {
 		enable = true;
@@ -48,7 +48,7 @@ in
 			xwayland = {
 				force_zero_scaling = true;
 			};
-			
+
 			cursor = {} // hardwareCursor;
 
 			general = {
@@ -63,7 +63,7 @@ in
 			decoration = {
 				rounding = 15;
 			};
-			
+
 			input = {
 				numlock_by_default = true;
 				touchpad = {
@@ -73,7 +73,7 @@ in
 				touchdevice = {} // touchScreen;
 				tablet.output = "HDMI-A-1";
 			};
-			
+
 			bindm = [
 				"SUPER, mouse:272, movewindow"
 				"SUPER ALT, mouse:272, resizewindow"
@@ -82,8 +82,8 @@ in
 			bind = [
 				"SUPER, Q, exec, kitty"
 				"SUPER, C, killactive"
-				"SUPER, F, fullscreen"		
-				"SUPER, v, togglefloating"	
+				"SUPER, F, fullscreen"
+				"SUPER, v, togglefloating"
 				# Window navigation
 				"SUPER, left, movefocus, l"
 				"SUPER, right, movefocus, r"

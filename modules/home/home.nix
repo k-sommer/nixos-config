@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, user, hostName, ... }:
+{ config, inputs, user, ... }:
 let
 	dotfiles = "/home/${user}/nixos-config/dotfiles";
 in
@@ -10,14 +10,14 @@ in
 		./programs.nix
     	./hyprland.nix
 	   	./stylix.nix
-    	./zen.nix		
+    	./zen.nix
 	];
 
 	programs.caelestia = {
 		enable = true;
 		cli.enable = false;
-	};		
-		home.file.".config/caelestia".source = 
+	};
+		home.file.".config/caelestia".source =
 			config.lib.file.mkOutOfStoreSymlink "${dotfiles}/caelestia";
 
 	home.username = "sommer";

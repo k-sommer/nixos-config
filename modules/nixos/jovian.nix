@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ ... }:
 {
   jovian = {
     decky-loader.enable = true;
@@ -12,9 +12,5 @@
       user = "sommer";
       desktopSession = "hyprland";
     };
-  };  
+  };
 }
-
-
-
-

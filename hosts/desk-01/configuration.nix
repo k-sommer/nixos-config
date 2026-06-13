@@ -1,11 +1,11 @@
-{ config, pkgs, inputs, dirs, ... }:
+{ ... }:
 {
 	imports = [
 		./hardware-configuration.nix
     ../../modules/nixos
 		../../modules/nixos/gui.nix
 	];
-	  	
+
 	networking.hostName = "desk-01";
 
 	features = {

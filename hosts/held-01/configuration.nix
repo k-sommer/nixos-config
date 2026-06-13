@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, dirs, ... }:
+{ ... }:
 {
 	imports = [
 		./hardware-configuration.nix
@@ -6,7 +6,7 @@
 		../../modules/nixos/gui.nix
 		../../modules/nixos/jovian.nix
 	];
-	  	
+
 	boot.kernelParams = [ "amdgpu.backlight=0" ];
 
 	networking.hostName = "held-01";
