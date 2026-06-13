@@ -20,6 +20,8 @@
 	services.upower.enable = true;
 	services.power-profiles-daemon.enable = true;
 	programs.dconf.enable = true;
+	services.gnome.gnome-keyring.enable = true;
+	security.pam.services.login.enableGnomeKeyring = true;
 	services.mullvad-vpn.enable = true;
 	services.resolved.enable = true;
 	services.pulseaudio.enable = false;
