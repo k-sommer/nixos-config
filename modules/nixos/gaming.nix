@@ -53,19 +53,19 @@ in
 			};
 		})
 
-		# Enables prime sync for laptops with nvidia cards
+		# Enables prime with offload for laptops with nvidia cards
 		(lib.mkIf cfg.nvidiaLaptop.enable {
 			services.xserver.videoDrivers= [ "nvidia" ];
 		 	hardware.nvidia = {
 				open = true;
-				modesetting.enable = true;
 				prime = {
-		    	sync.enable = true;
+				  offload.enable = true;
+				  offload.enableOffloadCmd = true;
 		    	intelBusId = "PCI:0:2:0";
 		    	nvidiaBusId = "PCI:1:0:0";
 				};
 			};
-		})		
+		})
 
 		(lib.mkIf cfg.xone.enable {
 			hardware.xone.enable = true;
