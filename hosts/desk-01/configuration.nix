@@ -22,5 +22,10 @@
 		};
 	};
 
+	services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="231d", MODE="0666", GROUP="input"
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="231d", MODE="0666", GROUP="input"
+	'';
+
 	system.stateVersion = "25.11";
 }
