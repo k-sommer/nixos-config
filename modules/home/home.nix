@@ -8,19 +8,18 @@ in
 		inputs.stylix.homeModules.stylix
 		inputs.zen-browser.homeModules.beta
 		./programs.nix
-#    	./hyprland.nix
-	   	./stylix.nix
-    	./zen.nix		
+		./stylix.nix
+		./zen.nix
 	];
 
 	programs.caelestia = {
 		enable = true;
 		cli.enable = false;
-	};		
-	home.file.".config/caelestia".source = 
+	};
+	home.file.".config/caelestia".source =
 		config.lib.file.mkOutOfStoreSymlink "${dotfiles}/caelestia";
 	home.file.".config/hypr".source =
-		config.lib.file.mkOutOfStoreSymlink "${dotfiles}/hypr";	
+		config.lib.file.mkOutOfStoreSymlink "${dotfiles}/hypr";
 
 	home.username = "sommer";
 	home.homeDirectory = "/home/sommer";
