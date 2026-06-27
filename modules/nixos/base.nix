@@ -12,7 +12,7 @@
 	networking.networkmanager.enable = true;
 
 	time.timeZone = "America/Denver";
-	  	
+
 	i18n.defaultLocale = "en_US.UTF-8";
 	i18n.extraLocaleSettings = {
 	  LC_ADDRESS = "en_US.UTF-8";
@@ -30,7 +30,7 @@
 		enable = true;
 		enable32Bit = true;
 	};
-	
+
 	services.hardware.bolt.enable = true;
 	services.openssh.enable = true;
 	services.tailscale.enable = true;
@@ -53,7 +53,7 @@
 		isNormalUser = true;
 		hashedPasswordFile = config.age.secrets.secret1.path;
 	  description = "sommer";
-	  extraGroups = [ "networkmanager" "wheel" "libvirtd"];
+	  extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
 		shell = pkgs.fish;
 	};
 
