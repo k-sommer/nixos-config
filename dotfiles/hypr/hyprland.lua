@@ -1,5 +1,3 @@
-require("modules.binds")
-
 local get_hostname = function()
     local f = io.popen("hostnamectl hostname")
     if f == nil then return "" end
@@ -8,9 +6,14 @@ local get_hostname = function()
     return hostname
 end
 
--- require("modules.hosts." .. get_hostname())
+require("modules.hosts." .. get_hostname())
+require("modules.binds")
 
-hl.env("HYPRCURSOR_THEME", "rose-pine")
+hl.env("HYPRCURSOR_THEME", "rose-pine-hyprcursor")
+
+hl.on("hyprland.start", function()
+    hl.exec_cmd("caelestia-shell")
+end)
 
 hl.config({
     xwayland = {
@@ -18,26 +21,27 @@ hl.config({
     },
 
     general = {
-		layout = "dwindle",
-		gaps_in = 5,
-		gaps_out = 10,  
-        border_size = 0,       
+        layout = "dwindle",
+        gaps_in = 5,
+        gaps_out = 10,
+        border_size = 0,
     },
 
     decoration = {
-        rounding =15, 
+        rounding = 15,
     },
 
     input = {
         numlock_by_default = true,
         touchpad = {
-            natural_scroll = true;
+            natural_scroll = true,
             clickfinger_behavior = true,
 
         },
     },
 
     misc = {
+        disable_autoreload = false,
         force_default_wallpaper = 0,
         disable_hyprland_logo = true,
     },
