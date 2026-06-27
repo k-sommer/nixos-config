@@ -8,8 +8,8 @@ let
 		])
 		(lib.mkIf (hostName == "desk-01") [
 			"DP-1, 2560x1440@144, auto, auto"
-			"HDMI-A-1, 1920x1080@120, auto-right, 1"
-			"DP-2, 2560x1440@144, auto-left, auto"
+			"HDMI-A-1, 1920x1080@120, auto-left, 1"
+			"DP-2, 2560x1440@144, auto-right, auto"
 		])
 	];
 
