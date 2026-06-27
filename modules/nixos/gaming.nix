@@ -9,6 +9,7 @@ in
 		nvidia.enable = lib.mkEnableOption "Nvidia drivers";
 		nvidiaLaptop.enable = lib.mkEnableOption "Nvidia Prime Configuration";
 		xone.enable = lib.mkEnableOption "Xone drivers (including dongle firmware)";
+		vr.enable = lib.mkEnableOption "VR drivers";
 	};
 
 	config = lib.mkMerge [
@@ -72,6 +73,13 @@ in
 			environment.systemPackages = with pkgs; [
 				xone-dongle-firmware
 			];
+		})
+
+		(lib.mkIf cfg.vr.enable {
+			services.wivrn = {
+				enable = true;
+				openFirewall = true;
+			};
 		})
 	];
 }

@@ -12,6 +12,7 @@
 		starCitizen.enable = true;
 		steam.enable = true;
 		xone.enable = true;
+		vr.enable = true;
 	};
 
 	services.displayManager = {
