@@ -55,6 +55,8 @@
 			specialArgs = { inherit inputs user hostName; };
 			modules = [
 				./hosts/${hostName}/configuration.nix
+				inputs.agenix.nixosModules.default
+				inputs.jovian-nixos.nixosModules.default
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
@@ -63,8 +65,6 @@
 						extraSpecialArgs = { inherit inputs user hostName; };
 					};
 				}
-				inputs.agenix.nixosModules.default
-				inputs.jovian-nixos.nixosModules.default
 			];
 		};
 
