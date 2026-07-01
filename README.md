@@ -54,12 +54,12 @@ nixos-config
 |    |NixOS|
 |----|-----|
 |Window Manager|[Hyprland](https://github.com/hyprwm/hyprland)|
-|Status Bar / Notifier / Launcher / lockscreen|[Caelestia-Shell](https://github.com/caelestia-shell/caelestia-shell)|
+|Status Bar / Notifier / Launcher / lockscreen|[Caelestia-Shell](https://github.com/caelestia-dots/shell)|
 |Stylix Color Scheme|[Rose-Pine](https://github.com/rose-pine)|
-|File Manager|[Nautilus](https://gitlab.gnome.org/GNOME/nautilus)|
+|File Manager|Nautilus|
 |Terminal|[Kitty](https://github.com/kovidgoyal/kitty)|
-|Shell|[Fish](https://github.com/fish-shell/fish)|
-|Image Viewer|[Eye of Gnome](https://gitlab.gnome.org/GNOME/eye-of-gnome)|
+|Shell|[Fish](https://github.com/fish-shell/fish-shell)|
+|Image Viewer|Eye of Gnome|
 
 # Screenshots
 ![image](assets/screenshot-1.png)
