@@ -14,7 +14,7 @@ nixos-config
 |-- LICENSE
 |-- README.md
 |-- dotfiles
-|   └── caelstia
+|   |── caelstia
 |   |   |-- cli.json
 |   |   └── shell.json
 |   └── hypr
