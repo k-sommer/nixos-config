@@ -1,4 +1,4 @@
-## Welcome to my NixOS systems flake! 
+## Welcome to my NixOS configuration! 
 While this repository is not meant to be a template for others to start from, I hope you can find some inspiration from it. 
 
 # Modules
