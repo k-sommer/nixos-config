@@ -1,4 +1,9 @@
 {
+    "appearance": {
+        "transparency": {
+            "enabled": false
+        }
+    },
     "background": {
         "desktopClock": {
             "background": {
@@ -10,26 +15,56 @@
             "shadow": {
                 "enabled": true
             }
-        }
+        },
+        "wallpaperEnabled": true
     },
     "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": true
+        },
         "clock": {
             "background": false,
             "showDate": true,
             "showIcon": false
         },
+        "persistent": true,
         "status": {
-            "showLockStatus": false
+            "showLockStatus": false,
+            "showWifi": false
+        },
+        "tray": {
+            "background": false,
+            "recolour": true
         },
         "workspaces": {
+            "activeTrail": false,
             "occupiedBg": false,
+            "showWindows": true,
             "shown": 4
         }
     },
     "border": {
         "rounding": 15
     },
+    "dashboard": {
+        "enabled": true,
+        "performance": {
+            "showMemory": true,
+            "showNetwork": true,
+            "showStorage": true
+        }
+    },
     "general": {
+        "apps": {
+            "explorer": [
+                "nautilus",
+                "--new-window"
+            ],
+            "terminal": [
+                "kitty"
+            ]
+        },
         "idle": {
             "inhibitWhenAudio": true,
             "lockBeforeSleep": true,
@@ -76,9 +111,13 @@
             "org.openrgb.OpenRGB",
             "Anno 2205"
         ],
+        "maxShown": 6,
         "showOnHover": true
     },
     "paths": {
         "sessionGif": "/home/sommer/nixos-config/assets/nixos.png"
+    },
+    "services": {
+        "gpuType": ""
     }
 }
