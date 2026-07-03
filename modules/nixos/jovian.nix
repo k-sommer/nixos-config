@@ -1,7 +1,8 @@
 { ... }:
 {
   jovian = {
-    decky-loader.enable = true;
+    # Disabled for now due to CVE-2026-48995
+    decky-loader.enable = false;
     hardware = {
       has.amd.gpu = true;
       amd.gpu.enableBacklightControl = true;
