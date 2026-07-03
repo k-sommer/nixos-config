@@ -1,9 +1,11 @@
 {
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
-		agenix.url = "github:ryantm/agenix";
+		agenix = {
+		  url = "github:ryantm/agenix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -12,9 +14,13 @@
 
 		jovian-nixos = {
 			url = "github:jovian-Experiments/jovian-nixos";
+			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		hyprland.url = "github:hyprwm/Hyprland";
+		hyprland = {
+		  url = "github:hyprwm/Hyprland";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		caelestia-shell = {
 			url = "github:caelestia-dots/shell";
@@ -41,7 +47,11 @@
     	inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		nix-gaming.url = "github:fufexan/nix-gaming";
+		nix-gaming = {
+		  url = "github:fufexan/nix-gaming";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		nix-citizen = {
 			url = "github:LovingMelody/nix-citizen";
 			inputs.nix-gaming.follows = "nix-gaming";
