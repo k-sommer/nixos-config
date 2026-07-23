@@ -8,22 +8,24 @@
 
 	hardware.bluetooth.enable = true;
 
-	# Realtime priority for pulseaudo and pipewire
-	security.rtkit.enable = true;
-
 	# Services for functional shell, usually installed automatically with
 	# with most desktop environments.
 	services.gvfs.enable = true;
 	services.dbus.enable = true;
 	services.udisks2.enable = true;
-	services.flatpak.enable = true;
 	services.upower.enable = true;
 	services.power-profiles-daemon.enable = true;
 	programs.dconf.enable = true;
+
+	# Flatpak installs through gnome software store
+	services.flatpak.enable = true;
+
 	services.gnome.gnome-keyring.enable = true;
 	security.pam.services.login.enableGnomeKeyring = true;
+
 	services.mullvad-vpn.enable = true;
 	services.resolved.enable = true;
+
 	services.pulseaudio.enable = false;
 	services.pipewire = {
 	  enable = true;
@@ -31,24 +33,11 @@
 	  alsa.support32Bit = true;
 	  pulse.enable = true;
 	};
-	services.hardware.openrgb = {
-		enable = true;
-		motherboard = "amd";
-	};
-
-	virtualisation.libvirtd.enable = true;
+	# Realtime priority for pulseaudo and pipewire
+	security.rtkit.enable = true;
 
 	programs.gamemode.enable = true;
 	programs.hyprland.enable = true;
-
-	nixpkgs.overlays = [
-  	# Skipping tests while upstream sorts it out, revert once lutris builds
-  	(final: prev: {
-  		openldap = prev.openldap.overrideAttrs (_: {
-  			doCheck = false;
- 			});
-  	})
-  ];
 
 	environment.systemPackages = with pkgs; [
 		inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
@@ -71,5 +60,6 @@
 		mullvad-vpn
 		openra
 		prismlauncher
+		darktable
 	];
 }
