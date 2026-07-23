@@ -8,10 +8,12 @@ hl.monitor({
 
 hl.config({
     cursor = {
-        no_hardware_cursor = 1,
+        no_hardware_cursors = 1,
     },
 
     input = {
-        touchdevice.transform = 1,
+        touchdevice = {
+            transform = 1,
+        },
     },
 })
