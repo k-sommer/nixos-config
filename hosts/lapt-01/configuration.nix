@@ -5,6 +5,7 @@
 		../../modules/nixos/system
 		../../modules/nixos/features/desktop.nix
 		../../modules/nixos/features/dev.nix
+		../../modules/nixos/gaming/nvidia.nix
 		../../modules/nixos/gaming/steam.nix
 	];
 
