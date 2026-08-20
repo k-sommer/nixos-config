@@ -35,6 +35,7 @@
 	  alsa.support32Bit = true;
 	  pulse.enable = true;
 	};
+
 	# Realtime priority for pulseaudo and pipewire
 	security.rtkit.enable = true;
 
@@ -59,6 +60,7 @@
 		dnsmasq
 	 	grim
 	 	flameshot
+		obsidian
 		mullvad-vpn
 		openra
 		prismlauncher

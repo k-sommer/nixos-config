@@ -6,6 +6,5 @@
 		zed-editor
 		direnv
 		android-tools
-		obsidian
 	];
 }
