@@ -2,17 +2,19 @@
 {
 	imports = [
 		./hardware-configuration.nix
-    ../../modules/nixos
-		../../modules/nixos/gui.nix
-		../../modules/nixos/dev.nix
+		../../modules/nixos/system
+		../../modules/nixos/features/desktop.nix
+		../../modules/nixos/features/dev.nix
+		../../modules/nixos/gaming/steam.nix
 	];
 
 	networking.hostName = "lapt-01";
 
-	features = {
-		nvidiaLaptop.enable = true;
-		steam.enable = true;
-		xone.enable = true;
+	hardware.nvidia.prime = {
+	  offload.enable = true;
+	  offload.enableOffloadCmd = true;
+   	intelBusId = "PCI:0:2:0";
+   	nvidiaBusId = "PCI:1:0:0";
 	};
 
 	services.displayManager.ly.enable = true;

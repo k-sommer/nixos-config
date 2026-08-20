@@ -2,18 +2,13 @@
 {
 	imports = [
 		./hardware-configuration.nix
-    ../../modules/nixos
-		../../modules/nixos/gui.nix
+    ../../modules/nixos/system
+		../../modules/nixos/features/desktop.nix
+		../../modules/nixos/gaming/steam.nix
+		../../modules/nixos/gaming/star-citizen.nix
 	];
 
 	networking.hostName = "desk-01";
-
-	features = {
-		starCitizen.enable = true;
-		steam.enable = true;
-		xone.enable = true;
-		vr.enable = true;
-	};
 
 	services.displayManager = {
 		ly.enable = true;
@@ -23,6 +18,7 @@
 		};
 	};
 
+	# For VKB flight stick
 	services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTRS{idVendor}=="231d", MODE="0666", GROUP="input"
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="231d", MODE="0666", GROUP="input"

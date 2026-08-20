@@ -26,6 +26,8 @@
 	services.mullvad-vpn.enable = true;
 	services.resolved.enable = true;
 
+	services.lact.enable = true;
+
 	services.pulseaudio.enable = false;
 	services.pipewire = {
 	  enable = true;
