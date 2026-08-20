@@ -1,7 +1,9 @@
 {
     "appearance": {
         "transparency": {
-            "enabled": false
+            "base": 0.9,
+            "enabled": true,
+            "layers": 0.6
         }
     },
     "background": {
@@ -29,10 +31,6 @@
             "showIcon": false
         },
         "persistent": true,
-        "status": {
-            "showLockStatus": false,
-            "showWifi": false
-        },
         "tray": {
             "background": false,
             "recolour": true
@@ -119,5 +117,8 @@
     },
     "services": {
         "gpuType": ""
+    },
+    "sidebar": {
+        "enabled": true
     }
 }
