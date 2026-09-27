@@ -118,6 +118,22 @@
     "services": {
         "gpuType": ""
     },
+    "session": {
+        "commands": {
+            "hibernate": [
+                "hibernate"
+            ],
+            "logout": [
+                "logout"
+            ],
+            "reboot": [
+                "reboot"
+            ],
+            "shutdown": [
+                "poweroff"
+            ]
+        }
+    },
     "sidebar": {
         "enabled": true
     }
