@@ -11,11 +11,13 @@
 
 	networking.hostName = "held-01";
 
-  services.handheld-daemon = {
-  	enable = true;
-  	user = "sommer";
-  	ui.enable = true;
-  };
+#	services.displayManager = {
+#		ly.enable = true;
+#		autoLogin = {
+#			enable = true;
+#			user = "sommer";
+#		};
+#	};
 
 	system.stateVersion = "25.11";
 }
