@@ -12,10 +12,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		# jovian-nixos = {
-			# url = "github:jovian-Experiments/jovian-nixos";
-			# inputs.nixpkgs.follows = "nixpkgs";
-		# };
+		jovian-nixos = {
+			url = "github:jovian-Experiments/jovian-nixos";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		hyprland = {
 		  url = "github:hyprwm/Hyprland";
@@ -66,10 +66,9 @@
 			modules = [
 				./hosts/${hostName}/configuration.nix
 				inputs.agenix.nixosModules.default
-#				inputs.jovian-nixos.nixosModules.default
+				inputs.jovian-nixos.nixosModules.default
 				home-manager.nixosModules.home-manager {
 					home-manager = {
-						useGlobalPkgs = true;
 						useUserPackages = true;
 						users.${user} = import ./modules/home/home.nix;
 						extraSpecialArgs = { inherit inputs user hostName; };
