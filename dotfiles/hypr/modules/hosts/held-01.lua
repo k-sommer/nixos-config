@@ -15,5 +15,6 @@ hl.config({
         touchdevice = {
             transform = 1,
         },
+        sensitivity = 0.5,
     },
 })
