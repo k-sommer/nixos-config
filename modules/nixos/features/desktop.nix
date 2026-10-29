@@ -7,6 +7,8 @@
 	};
 
 	hardware.bluetooth.enable = true;
+	# Needed as caelestia bluetooth manaager does not work
+	services.blueman.enable = true;
 
 	# Services for functional shell, usually installed automatically with
 	# with most desktop environments.
